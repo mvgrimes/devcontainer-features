@@ -8,7 +8,7 @@ This repo contains my custom devcontainer features.
 
 | Feature                                                      | Description                                                                                                                                      |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [asdf](./src/)sdf       | Install asdf from github releases.                                                                                                |
+| [asdf](./src/)       | Install asdf from github releases.                                                                                                |
 | [claud-code-persistance](./src/claude-code-persistence) | Avoid extra logins from the Claude Code CLI by preserving the `~/.claude/.credentials.json` folder across container instances.                                        |
 | [pnpm-store-persistence](./src/pnpm-store-persistence)             | Sets pnpm store to ~/.pnpm-store and mounts it to a volume to share between multiple devcontainers. |
 

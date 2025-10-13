@@ -1,12 +1,12 @@
 {
     "name": "asdf",
     "id": "asdf",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Install asdf from github releases.",
     "options": {
         "favorite": {
             "type": "string",
-            "default": "v0.18.0",
+            "default": "0.18.0",
             "description": "The version of asdf to install."
         }
     },
