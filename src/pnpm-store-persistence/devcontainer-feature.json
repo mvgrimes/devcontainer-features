@@ -1,7 +1,7 @@
 {
   "name": "PNPM Store Persistence",
   "id": "pnpm-store-persistence",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Sets pnpm store to ~/.pnpm-store and mounts it to a volume to share between multiple devcontainers",
   "options": {},
   "mounts": [
@@ -25,8 +25,5 @@
   },
   "postAttachCommand": {
     "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/scripts/postattach.sh"
-  },
-  "installsAfter": [
-    "ghcr.io/devcontainers/features/common-utils"
-  ]
+  }
 }

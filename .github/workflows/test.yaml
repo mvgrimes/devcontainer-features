@@ -17,8 +17,8 @@ jobs:
           - claude-code-persistence
           - pnpm-store-persistence
         baseImage:
-          - debian:latest
-          - ubuntu:latest
+          # - debian:latest
+          # - ubuntu:latest
           - mcr.microsoft.com/devcontainers/base:ubuntu
     steps:
       - uses: actions/checkout@v4

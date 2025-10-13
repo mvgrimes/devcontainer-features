@@ -1,7 +1,7 @@
 {
   "name": "asdf",
   "id": "asdf",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Install asdf from github releases.",
   "options": {
     "favorite": {
@@ -15,8 +15,5 @@
   },
   "updateContentCommand": {
     "pnpm-store-persistence": "/usr/local/share/asdf/scripts/updatecontent.sh"
-  },
-  "dependsOn": [
-    "ghcr.io/devcontainers/features/common-utils"
-  ]
+  }
 }
