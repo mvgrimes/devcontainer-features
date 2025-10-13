@@ -1,6 +1,12 @@
 #!/bin/sh
 set -e
 
+echo "containerUser: $USER"
+echo "remoteUser: $_REMOTE_USER"
+echo "remoteUser home: $_REMOTE_USER_HOME"
+echo "env: "
+env
+
 USERNAME=${USERNAME:-${_REMOTE_USER}}
 FEATURE_ID="pnpm-store-persistence"
 LIFECYCLE_SCRIPTS_DIR="/usr/local/share/${FEATURE_ID}/scripts"
@@ -47,6 +53,22 @@ create_symlink_dir "$_REMOTE_USER_HOME/.pnpm-store" "$VOLUME_MOUNT" "${USERNAME}
 if [ -f oncreate.sh ]; then
     mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
     cp oncreate.sh "${LIFECYCLE_SCRIPTS_DIR}/oncreate.sh"
+fi
+if [ -f postattch.sh ]; then
+    mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
+    cp postattch.sh "${LIFECYCLE_SCRIPTS_DIR}/postattch.sh"
+fi
+if [ -f postcreate.sh ]; then
+    mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
+    cp postcreate.sh "${LIFECYCLE_SCRIPTS_DIR}/postcreate.sh"
+fi
+if [ -f poststart.sh ]; then
+    mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
+    cp poststart.sh "${LIFECYCLE_SCRIPTS_DIR}/poststart.sh"
+fi
+if [ -f updatecontent.sh ]; then
+    mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
+    cp updatecontent.sh "${LIFECYCLE_SCRIPTS_DIR} updatecontent.sh"
 fi
 
 echo "Finished installing $FEATURE_ID"

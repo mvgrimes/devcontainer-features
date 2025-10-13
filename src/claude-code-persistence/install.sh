@@ -1,6 +1,12 @@
 #!/bin/sh
 set -e
 
+echo "containerUser: $USER"
+echo "remoteUser: $_REMOTE_USER"
+echo "remoteUser home: $_REMOTE_USER_HOME"
+echo "env: "
+env
+
 USERNAME=${USERNAME:-${_REMOTE_USER}}
 FEATURE_ID="claude-code-persistence"
 LIFECYCLE_SCRIPTS_DIR="/usr/local/share/${FEATURE_ID}/scripts"
