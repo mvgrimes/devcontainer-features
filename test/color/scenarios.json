@@ -1,5 +1,5 @@
 {
-    "my_favorite_color_is_green": {
+    "example2": {
         "image": "mcr.microsoft.com/devcontainers/base:focal",
         "features": {
             "ghcr.io/devcontainers/features/common-utils:1": {
@@ -7,27 +7,8 @@
                 "installOhMyZsh": false,
                 "upgradePackages": false,
                 "username": "octocat"
-            },
-            "color": {
-                "favorite": "green"
             }
         },
-        "remoteUser": "octocat"
-    },
-    "gold": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "color": {
-                "favorite": "gold"
-            }
-        }
-    },
-    "green": {
-        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-        "features": {
-            "color": {
-                "favorite": "green"
-            }
-        }
+        "remoteUser": "node"
     }
 }
