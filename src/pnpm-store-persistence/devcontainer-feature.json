@@ -1,7 +1,7 @@
 {
   "name": "PNPM Store Persistence",
   "id": "pnpm-store-persistence",
-    "version": "0.1.2",
+    "version": "0.1.3",
   "description": "Sets pnpm store to ~/.pnpm-store and mounts it to a volume to share between multiple devcontainers",
   "options": {},
   "mounts": [
@@ -17,18 +17,18 @@
     "ghcr.io/devcontainers-extra/features/pnpm"
   ],
   "onCreateCommand": {
-    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/oncreate.sh"
+    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/scripts/oncreate.sh"
   },
   "updateContentCommand": {
-    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/updatecontent.sh"
+    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/scripts/updatecontent.sh"
   },
   "postCreateCommand": {
-    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/postcreate.sh"
+    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/scripts/postcreate.sh"
   },
   "postStartCommand": {
-    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/poststart.sh"
+    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/scripts/poststart.sh"
   },
   "postAttachCommand": {
-    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/postattache.sh"
+    "pnpm-store-persistence": "/usr/local/share/pnpm-store-persistence/scripts/postattach.sh"
   }
 }
