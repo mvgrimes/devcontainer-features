@@ -22,26 +22,26 @@ create_cache_dir() {
     fi
 }
 
-create_symlink_dir() {
-    local local_dir=$1
-    local cache_dir=$2
+create_symlink_file() {
+    local local_file=$1
+    local cache_file=$2
     local username=$3
 
-    runuser -u "$username" -- mkdir -p "$(dirname "$local_dir")"
-    runuser -u "$username" -- mkdir -p "$cache_dir"
+    runuser -u "$username" -- mkdir -p "$(dirname "$local_file")"
+    runuser -u "$username" -- mkdir -p "$(dirname "$cache_file")"
 
-    # if the folder we want to symlink already exists, the ln -s command will create a folder inside the existing folder
-    if [ -e "$local_dir" ]; then
-        echo "Moving existing $local_dir folder to $local_dir-old"
-        mv "$local_dir" "$local_dir-old"
+    # if the file we want to symlink already exists, the ln -s command will create a folder inside the existing folder
+    if [ -e "$local_file" ] && [ ! -L "$local_file" ]; then
+        echo "Moving existing $local_file to ${local_file}-old"
+        mv "$local_file" "${local_file}-old"
     fi
 
-    echo "Symlink $local_dir to $cache_dir for $username..."
-    runuser -u "$username" -- ln -s "$cache_dir" "$local_dir"
+    echo "Symlink $local_file to $cache_file for $username..."
+    runuser -u "$username" -- ln -s "$cache_file" "$local_file"
 }
 
 create_cache_dir "$VOLUME_MOUNT" "${USERNAME}"
-create_symlink_dir "$_REMOTE_USER_HOME/.claude/.credentials.json" "$VOLUME_MOUNT/credentials.json" "${USERNAME}"
+create_symlink_file "$_REMOTE_USER_HOME/.claude/.credentials.json" "$VOLUME_MOUNT/credentials.json" "${USERNAME}"
 
 # Set Lifecycle scripts
 if [ -f oncreate.sh ]; then
