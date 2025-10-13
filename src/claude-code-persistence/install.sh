@@ -74,7 +74,7 @@ if [ -f poststart.sh ]; then
 fi
 if [ -f updatecontent.sh ]; then
     mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
-    cp updatecontent.sh "${LIFECYCLE_SCRIPTS_DIR} updatecontent.sh"
+    cp updatecontent.sh "${LIFECYCLE_SCRIPTS_DIR}/updatecontent.sh"
     echo "Created updatecontent.sh lifecycle script"
 fi
 
