@@ -1,7 +1,7 @@
 {
     "name": "asdf",
     "id": "asdf",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "Install asdf from github releases.",
     "options": {
         "favorite": {

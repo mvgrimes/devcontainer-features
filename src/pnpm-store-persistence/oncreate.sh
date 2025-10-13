@@ -12,7 +12,7 @@ env
 
 # set pnpm config (if it's installed)
 if type pnpm >/dev/null 2>&1; then
-    echo "Setting pnpm store location to $_REMOTE_USER_HOME/.pnpm-store"
+    echo "Setting pnpm store location for $USER to $HOME/.pnpm-store"
     pnpm config set store-dir ~/.pnpm-store --global
 else
     echo "WARN: pnpm is not installed! Please ensure pnpm is installed and in your PATH."
