@@ -1,22 +1,22 @@
 {
-    "name": "asdf",
-    "id": "asdf",
-    "version": "0.1.4",
-    "description": "Install asdf from github releases.",
-    "options": {
-        "favorite": {
-            "type": "string",
-            "default": "0.18.0",
-            "description": "The version of asdf to install."
-        }
-    },
-    "onCreateCommand": {
-      "pnpm-store-persistence": "/usr/local/share/asdf/scripts/oncreate.sh"
-    },
-    "updateContentCommand": {
-      "pnpm-store-persistence": "/usr/local/share/asdf/scripts/updatecontent.sh"
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils"
-    ]
+  "name": "asdf",
+  "id": "asdf",
+  "version": "0.1.6",
+  "description": "Install asdf from github releases.",
+  "options": {
+    "favorite": {
+      "type": "string",
+      "default": "0.18.0",
+      "description": "The version of asdf to install."
+    }
+  },
+  "onCreateCommand": {
+    "pnpm-store-persistence": "/usr/local/share/asdf/scripts/oncreate.sh"
+  },
+  "updateContentCommand": {
+    "pnpm-store-persistence": "/usr/local/share/asdf/scripts/updatecontent.sh"
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
 }

@@ -8,6 +8,3 @@ echo "$FEATURE_ID $LIFECYCLE"
 echo "USER: $USER"
 echo "env: "
 env
-
-
-

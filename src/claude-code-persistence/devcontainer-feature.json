@@ -1,20 +1,20 @@
 {
-    "name": "Claude Code Persistence",
-    "id": "claude-code-persistence",
-    "version": "0.1.4",
-    "description": "Avoid extra logins from the Claude Code CLI by preserving the `~/.claude/.credentials.json` folder across container instances.",
-    "options": {},
-    "mounts": [
-        {
-            "source": "claude-code-config",
-            "target": "/dc/claude-code",
-            "type": "volume"
-        }
-    ],
-    "onCreateCommand": {
-        "claude-code-persistence": "/usr/local/share/claude-code-persistence/scripts/oncreate.sh"
-    },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils"
-    ]
+  "name": "Claude Code Persistence",
+  "id": "claude-code-persistence",
+  "version": "0.1.6",
+  "description": "Avoid extra logins from the Claude Code CLI by preserving the `~/.claude/.credentials.json` folder across container instances.",
+  "options": {},
+  "mounts": [
+    {
+      "source": "claude-code-config",
+      "target": "/dc/claude-code",
+      "type": "volume"
+    }
+  ],
+  "onCreateCommand": {
+    "claude-code-persistence": "/usr/local/share/claude-code-persistence/scripts/oncreate.sh"
+  },
+  "installsAfter": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ]
 }

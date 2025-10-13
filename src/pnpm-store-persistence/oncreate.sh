@@ -11,7 +11,7 @@ echo "env:"
 env
 
 # set pnpm config (if it's installed)
-if type pnpm >/dev/null 2>&1; then
+if type pnpm > /dev/null 2>&1; then
     echo "Setting pnpm store location for $USER to $HOME/.pnpm-store"
     pnpm config set store-dir ~/.pnpm-store --global
 else

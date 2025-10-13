@@ -8,10 +8,10 @@ VERSION=${VERSION:-"0.18.0"}
 ARCH="arm64"
 
 if [ ! -e "/usr/local/bin/asdf" ]; then
-  url="https://github.com/asdf-vm/asdf/releases/download/v${VERSION}/asdf-v${VERSION}-linux-${ARCH}.tar.gz"
-  echo "$FEATURE_ID install asdf from $url"
+    url="https://github.com/asdf-vm/asdf/releases/download/v${VERSION}/asdf-v${VERSION}-linux-${ARCH}.tar.gz"
+    echo "$FEATURE_ID install asdf from $url"
 
-  curl -fsSL "$url" | tar xvz -C /usr/local/bin
+    curl -fsSL "$url" | tar xvz -C /usr/local/bin
 fi
 
 # Setup lifecycle scripts

@@ -42,4 +42,3 @@ if [ -f updatecontent.sh ]; then
 fi
 
 echo "Finished installing $FEATURE_ID"
-
