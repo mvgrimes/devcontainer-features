@@ -11,10 +11,10 @@
             "type": "volume"
         }
     ],
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/common-utils"
-    ],
     "onCreateCommand": {
         "claude-code-persistence": "/usr/local/share/claude-code-persistence/scripts/oncreate.sh"
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
 }

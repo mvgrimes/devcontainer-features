@@ -10,6 +10,12 @@
             "description": "The version of asdf to install."
         }
     },
+    "onCreateCommand": {
+      "pnpm-store-persistence": "/usr/local/share/asdf/scripts/oncreate.sh"
+    },
+    "updateContentCommand": {
+      "pnpm-store-persistence": "/usr/local/share/asdf/scripts/updatecontent.sh"
+    },
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]

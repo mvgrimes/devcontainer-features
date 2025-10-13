@@ -49,10 +49,33 @@ create_symlink_file() {
 create_cache_dir "$VOLUME_MOUNT" "${USERNAME}"
 create_symlink_file "$_REMOTE_USER_HOME/.claude/.credentials.json" "$VOLUME_MOUNT/credentials.json" "${USERNAME}"
 
-# Set Lifecycle scripts
+# Setup lifecycle scripts
+echo "Scripts:"
+ls
 if [ -f oncreate.sh ]; then
     mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
     cp oncreate.sh "${LIFECYCLE_SCRIPTS_DIR}/oncreate.sh"
+    echo "Created oncreate.sh lifecycle script"
+fi
+if [ -f postattch.sh ]; then
+    mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
+    cp postattch.sh "${LIFECYCLE_SCRIPTS_DIR}/postattch.sh"
+    echo "Created postattch.sh lifecycle script"
+fi
+if [ -f postcreate.sh ]; then
+    mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
+    cp postcreate.sh "${LIFECYCLE_SCRIPTS_DIR}/postcreate.sh"
+    echo "Created postcreate.sh lifecycle script"
+fi
+if [ -f poststart.sh ]; then
+    mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
+    cp poststart.sh "${LIFECYCLE_SCRIPTS_DIR}/poststart.sh"
+    echo "Created poststart.sh lifecycle script"
+fi
+if [ -f updatecontent.sh ]; then
+    mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
+    cp updatecontent.sh "${LIFECYCLE_SCRIPTS_DIR} updatecontent.sh"
+    echo "Created updatecontent.sh lifecycle script"
 fi
 
 echo "Finished installing $FEATURE_ID"
