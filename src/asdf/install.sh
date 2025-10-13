@@ -22,10 +22,10 @@ if [ -f oncreate.sh ]; then
     cp oncreate.sh "${LIFECYCLE_SCRIPTS_DIR}/oncreate.sh"
     echo "Created oncreate.sh lifecycle script"
 fi
-if [ -f postattch.sh ]; then
+if [ -f postattach.sh ]; then
     mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
-    cp postattch.sh "${LIFECYCLE_SCRIPTS_DIR}/postattch.sh"
-    echo "Created postattch.sh lifecycle script"
+    cp postattach.sh "${LIFECYCLE_SCRIPTS_DIR}/postattach.sh"
+    echo "Created postattach.sh lifecycle script"
 fi
 if [ -f postcreate.sh ]; then
     mkdir -p "${LIFECYCLE_SCRIPTS_DIR}"
