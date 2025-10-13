@@ -13,8 +13,9 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - asdf
+          - claude-code-persistence
+          - pnpm-store-persistence
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -34,8 +35,9 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - asdf
+          - claude-code-persistence
+          - pnpm-store-persistence
     steps:
       - uses: actions/checkout@v4
 
