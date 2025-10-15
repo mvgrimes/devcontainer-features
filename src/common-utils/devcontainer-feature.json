@@ -1,0 +1,8 @@
+{
+  "name": "Common Utils",
+  "id": "common-utils",
+  "version": "0.1.0",
+  "description": "Add some common utils (tmux, ripgrep, etc.)",
+  "options": {}
+}
+
