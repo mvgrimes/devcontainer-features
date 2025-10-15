@@ -1,7 +1,7 @@
 {
   "name": "Claude Code Persistence",
   "id": "claude-code-persistence",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Avoid extra logins from the Claude Code CLI by preserving the `~/.claude/.credentials.json` folder across container instances.",
   "options": {},
   "mounts": [
