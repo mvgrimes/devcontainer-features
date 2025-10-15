@@ -1,0 +1,8 @@
+{
+  "name": "Secure node user",
+  "id": "secure-node-user",
+  "version": "0.1.0",
+  "description": "Secure node user (remove from sudoers, etc)",
+  "options": {}
+}
+
