@@ -2,9 +2,7 @@
 set -e
 
 FEATURE_ID="pnpm-store-persistence"
-LIFECYCLE="postattach.sh"
+LIFECYCLE="postcreate.sh"
 
 echo "$FEATURE_ID $LIFECYCLE"
 echo "USER: $USER"
-echo "env: "
-env

@@ -7,8 +7,6 @@ LIFECYCLE="oncreate.sh"
 
 echo "$FEATURE_ID $LIFECYCLE"
 echo "USER: $USER"
-echo "env:"
-env
 
 # set pnpm config (if it's installed)
 if type pnpm > /dev/null 2>&1; then
