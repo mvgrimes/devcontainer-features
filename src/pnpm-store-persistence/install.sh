@@ -50,6 +50,9 @@ create_symlink_dir() {
 create_cache_dir "$VOLUME_MOUNT" "${USERNAME}"
 create_symlink_dir "$_REMOTE_USER_HOME/.pnpm-store" "$VOLUME_MOUNT" "${USERNAME}"
 
+echo "Change owner of $VOLUME_MOUNT to $_REMOTE_USER..."
+chown -R "$_REMOTE_USER:$_REMOTE_USER" "$VOLUME_MOUNT"
+
 # Setup lifecycle scripts
 echo "Scripts:"
 ls

@@ -49,6 +49,9 @@ create_symlink_file() {
 create_cache_dir "$VOLUME_MOUNT" "${USERNAME}"
 create_symlink_file "$_REMOTE_USER_HOME/.claude/.credentials.json" "$VOLUME_MOUNT/credentials.json" "${USERNAME}"
 
+echo "Change owner of $VOLUME_MOUNT to $_REMOTE_USER..."
+chown -R "$_REMOTE_USER:$_REMOTE_USER" "$VOLUME_MOUNT"
+
 # Setup lifecycle scripts
 echo "Scripts:"
 ls
