@@ -1,7 +1,7 @@
 {
   "name": "PNPM Store Persistence",
   "id": "pnpm-store-persistence",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Sets pnpm store to ~/.pnpm-store and mounts it to a volume to share between multiple devcontainers",
   "options": {},
   "mounts": [

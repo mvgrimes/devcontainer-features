@@ -1,8 +1,11 @@
 {
   "name": "Common Utils",
   "id": "common-utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Add some common utils (tmux, ripgrep, etc.)",
-  "options": {}
+  "options": {},
+  "onCreateCommand": {
+    "common-utils": "/usr/local/share/asdf/scripts/oncreate.sh"
+  }
 }
 

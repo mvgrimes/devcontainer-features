@@ -47,8 +47,11 @@ create_symlink_dir() {
     runuser -u "$username" -- ln -s "$cache_dir" "$local_dir"
 }
 
-create_cache_dir "$VOLUME_MOUNT" "${USERNAME}"
-create_symlink_dir "$_REMOTE_USER_HOME/.pnpm-store" "$VOLUME_MOUNT" "${USERNAME}"
+create_cache_dir "$VOLUME_MOUNT" "$USERNAME"
+# create_cache_dir "$VOLUME_MOUNT/pnpm-global-store" "$USERNAME"
+# create_cache_dir "$VOLUME_MOUNT/$CONTAINER_ID/pnpm-store" "$USERNAME"
+# create_cache_dir "$VOLUME_MOUNT/$CONTAINER_ID/node_modules" "$USERNAME"
+create_symlink_dir "$_REMOTE_USER_HOME/.pnpm-store" "$VOLUME_MOUNT" "$USERNAME"
 
 echo "Change owner of $VOLUME_MOUNT to $_REMOTE_USER..."
 chown -R "$_REMOTE_USER:$_REMOTE_USER" "$VOLUME_MOUNT"

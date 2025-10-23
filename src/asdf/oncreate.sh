@@ -13,6 +13,7 @@ LIFECYCLE_SCRIPTS_DIR="/usr/local/share/${FEATURE_ID}/scripts"
 
 echo "Configuring $FEATURE_ID"
 
+# Install plugins and used tool versions
 if [ -e ".tool-versions" ]; then
     while read -r plugin version; do
         echo "... adding plugin: $plugin"
@@ -23,5 +24,8 @@ if [ -e ".tool-versions" ]; then
 else
     echo "No .tool-versions file found"
 fi
+
+# Add asdf shims to path
+echo 'export PATH=$HOME/.asdf/shims:$PATH' >> $HOME/.bash_profile
 
 echo "Finished installing $FEATURE_ID"

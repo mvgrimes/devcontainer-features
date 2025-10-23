@@ -1,7 +1,7 @@
 {
   "name": "asdf",
   "id": "asdf",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Install asdf from github releases.",
   "options": {
     "favorite": {
@@ -11,9 +11,9 @@
     }
   },
   "onCreateCommand": {
-    "pnpm-store-persistence": "/usr/local/share/asdf/scripts/oncreate.sh"
+    "asdf": "/usr/local/share/asdf/scripts/oncreate.sh"
   },
   "updateContentCommand": {
-    "pnpm-store-persistence": "/usr/local/share/asdf/scripts/updatecontent.sh"
+    "asdf": "/usr/local/share/asdf/scripts/updatecontent.sh"
   }
 }

@@ -12,7 +12,7 @@ FEATURE_ID="common-utils"
 LIFECYCLE_SCRIPTS_DIR="/usr/local/share/${FEATURE_ID}/scripts"
 
 
-echo "Installing common-utils"
+echo "Installing $FEATURE_ID"
 apt update -y \
   && apt install -y \
     tmux \
